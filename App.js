@@ -4,11 +4,12 @@ import codePush from "react-native-code-push";
 
 class App extends Component {
   render() {
-    return (<View style={{flex:1,backgroundColor:'purple',justifyContent:'center',alignItems:'center'}}>
+    return (<View style={{flex:1,backgroundColor:'green',justifyContent:'center',alignItems:'center'}}>
       <Text>Hello Folks</Text>
       <Text style={{color:'white'}}>React Native Rules !</Text>
     </View>)
   }
+  
 
   // Méthode lifecycle de codepush 
   codePushStatusDidChange(status) {
@@ -35,6 +36,12 @@ class App extends Component {
     console.log(progress.receivedBytes + " of " + progress.totalBytes + " received.");
   }
 }
+
+// new CodePush(
+//   "deployment-key",
+//   getApplicationContext(),
+//   BuildConfig.DEBUG,
+//   R.string.CodePushPublicKey)
 
 App = codePush(App);
 
